@@ -1,41 +1,55 @@
-# Prerequisites
-*.d
+# OpenFOAM Temporary Files
+*.bak
+*.tmp
+*.swp
+*~
+0/*.gz
+log.*
+*postProcessing*
+*_mesh*
 
-# Compiled Object files
-*.slo
-*.lo
+# Processor Directories (parallel runs)
+processor*/
+decomposeParDict
+
+# Mesh Files (compressed versions)
+constant/polyMesh/*.gz
+constant/polyMesh/sets
+
+# Large Data Files
+*.dat
+*.csv
+*.txt
+
+# Compiled Objects
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
 *.so
-*.dylib
-*.dll
+*.dep
 
-# Fortran module files
-*.mod
-*.smod
+# IDE/Editor Files
+.vscode/
+.idea/
+*.code-workspace
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Executables
-*.exe
-*.out
-*.app
+# Backup Files
+*.orig
+*.backup
 
-# debug information files
-*.dwo
+# ParaView Cache
+*.pvsm
+*.png
+*.jpg
+*.vtk
+
+# Log Files
+*.log
+run/
+
+# Temporary Simulation Files
+**/time*/
+**/constant/polyMesh/*.bin
