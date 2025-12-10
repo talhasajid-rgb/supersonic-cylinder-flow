@@ -96,11 +96,11 @@ OpenFOAM/system/
 
 ---
 
-##  Technical Report
+## Technical Report
 
 A full report describing the methodology, theory, numerical implementation, and results is included:
 
-📎 **Report_Talha.pdf**
+📎 **Full Report:** [Report_Talha.pdf](Report_Talha.pdf)
 
 It contains:
 
@@ -110,6 +110,7 @@ It contains:
 - Velocity, pressure, temperature, and density contours  
 - Shock standoff-distance calculations  
 - Comparison with theoretical predictions  
+ 
 
 ---
 
