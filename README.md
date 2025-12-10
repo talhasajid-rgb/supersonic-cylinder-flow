@@ -25,7 +25,7 @@ The simulations capture key high-speed aerodynamic features including the detach
 5. Validate CFD predictions against theoretical and analytical results  
 
 
-## 📁 Repository Structure
+## Repository Structure
 Supersonic-Cylinder-Flow/
 │
 ├── OpenFOAM/
