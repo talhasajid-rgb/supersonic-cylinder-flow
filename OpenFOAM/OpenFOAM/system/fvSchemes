@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |
+| \\      /  Finite Volume | OpenFOAM: The Open Source CFD Toolbox
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default     Euler;
+}
+
+gradSchemes
+{
+    default     leastSquares;
+}
+
+divSchemes
+{
+    default         none;
+
+}
+
+laplacianSchemes
+{
+    default     Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+    reconstruct(rho)  vanLeer; //upwind
+    reconstruct(U)    vanLeerV;
+    reconstruct(T)    vanLeer;
+}
+
+snGradSchemes
+{
+    
+    default     corrected;
+}
+
+fluxRequired
+{
+    p;
+    U;
+    T;
+    h;
+    e;
+    rho;
+}
+
+wallDist
+{
+    method meshWave;
+}
+
+// ************************************************************************* //
