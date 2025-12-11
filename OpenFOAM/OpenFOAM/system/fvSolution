@@ -89,33 +89,10 @@ solvers
 // =============================================================
 
 PIMPLE
-{
-    nCorrectors             2;        // Reduced from 3 (less needed for inviscid)
-    nNonOrthogonalCorrectors 0;       // Set to 0 for inviscid
-    momentumPredictor       yes;
-    
-    // Relax PIMPLE convergence for hyperbolic problems
-    
+{ 
 }
 
-// =============================================================
-//  Relaxation factors - IMPORTANT FOR STABILITY
-// =============================================================
 
-relaxationFactors
-{
-    fields
-    {
-        p       0.3;      // Strong relaxation for pressure
-    }
 
-    equations
-    {
-        rho     0.3;
-        U       0.3;      // Relax velocity more aggressively
-        T       0.3;
-        e       0.3;
-    }
-}
 
 // ************************************************************************* //
