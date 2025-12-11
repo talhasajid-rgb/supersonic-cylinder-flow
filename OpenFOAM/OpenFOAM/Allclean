@@ -1,0 +1,21 @@
+#!/bin/bash
+# Allclean: reset the case
+
+# Go to the directory where this script lives
+cd "${0%/*}" || exit 1
+
+echo "Removing time directories..."
+foamListTimes -rm
+
+echo "Removing parallel processors and postProcessing (if any)..."
+rm -rf processor*
+rm -rf postProcessing
+
+# If you have a backup of the original 0 directory (0.org), restore it:
+if [ -d "0.org" ]; then
+    echo "Restoring 0 from 0.org..."
+    rm -rf 0
+    cp -r 0.org 0
+fi
+
+echo "Allclean done."

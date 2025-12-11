@@ -1,0 +1,16 @@
+#!/bin/bash
+# Allrun: clean and run the case with shockFluid
+
+# Go to the directory where this script lives
+cd "${0%/*}" || exit 1
+
+# Load OpenFOAM environment (skip if already in .bashrc)
+. $WM_PROJECT_DIR/etc/bashrc
+
+echo "Running Allclean..."
+./Allclean
+
+echo "Starting simulation with shockFluid..."
+foamRun > log.shockFluid 2>&1
+
+echo "Simulation finished. Log in log.shockFluid"
